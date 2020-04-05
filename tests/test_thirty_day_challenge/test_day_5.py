@@ -1,5 +1,5 @@
 import unittest
-from thirty_day_challenge.day_5 import get_max_profit
+from thirty_day_challenge.day_5 import get_max_profit, get_max_linear_time
 
 
 class TestDay5(unittest.TestCase):
@@ -9,7 +9,7 @@ class TestDay5(unittest.TestCase):
         arr = [10]
 
         # act
-        result = get_max_profit(arr)
+        result = get_max_linear_time(arr)
 
         # assert
         self.assertEqual(0, result)
@@ -19,7 +19,7 @@ class TestDay5(unittest.TestCase):
         arr = [1, 2, 3, 4, 5]
 
         # act
-        result = get_max_profit(arr)
+        result = get_max_linear_time(arr)
 
         # assert
         self.assertEqual(4, result)
@@ -29,7 +29,7 @@ class TestDay5(unittest.TestCase):
         arr = [5, 4, 3, 2, 1]
 
         # act
-        result = get_max_profit(arr)
+        result = get_max_linear_time(arr)
 
         # assert
         self.assertEqual(0, result)
@@ -39,7 +39,7 @@ class TestDay5(unittest.TestCase):
         arr = [7, 1, 5, 3, 6, 4]
 
         # act
-        result = get_max_profit(arr)
+        result = get_max_linear_time(arr)
 
         # assert
         self.assertEqual(7, result)
@@ -49,7 +49,7 @@ class TestDay5(unittest.TestCase):
         arr = [3, 2, 6, 5, 0, 3]
 
         # act
-        result = get_max_profit(arr)
+        result = get_max_linear_time(arr)
 
         # assert
         self.assertEqual(7, result)

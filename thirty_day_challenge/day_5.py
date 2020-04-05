@@ -35,9 +35,24 @@ def get_max_profit(arr: List[int]):
     return max_profit
 
 
+def get_max_linear_time(arr: List[int]):
+
+    max_profit = 0
+    prev_min = arr[0]
+
+    for i in range(len(arr) - 1):
+        if arr[i + 1] < arr[i]:
+            max_profit += arr[i] - prev_min
+            prev_min = arr[i + 1]
+
+    max_profit += max(0, arr[-1] - prev_min)
+
+    return max_profit
+
+
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        return get_max_profit(prices)
+        return get_max_linear_time(prices)
 
 
 if __name__ == "__main__":
