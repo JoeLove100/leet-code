@@ -37,6 +37,7 @@ def shifted_binary_research(arr: List[int],
         else:
             return shifted_binary_research(arr, key, mid + 1, end)
 
+
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         return shifted_binary_research(nums, target, 0, len(nums))
