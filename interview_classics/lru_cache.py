@@ -9,7 +9,7 @@ capacity, it should invalidate the least recently used item before inserting a n
 The cache is initialized with a POSITIVE capacity.
 """
 
-from collections import deque
+import heapq
 
 
 class LRUCache:
@@ -17,32 +17,54 @@ class LRUCache:
     def __init__(self, capacity: int):
 
         self._capacity = capacity
-        self._queue = deque([])
+        self._heap = []
+        heapq.heapify([])
         self._cache = dict()
+        self._count = 0
+        self._entry_register = dict()
 
     def get(self, key: int) -> int:
 
-        return self._cache.get(key, -1)
+        if key not in self._cache:
+            return -1
+        else:
+            if key in self._entry_register:
+                prev_entry = self._entry_register[key]
+                prev_entry[2] = False
+
+            new_entry = [self._count, key, True]
+            self._entry_register.update({key: new_entry})
+            heapq.heappush(self._heap, new_entry)
+            self._count += 1
+            return self._cache[key]
 
     def put(self, key: int, value: int) -> None:
 
-        if len(self._queue) == self._capacity:
-            to_remove = self._queue.popleft()
-            self._cache.pop(to_remove)
+        if key in self._cache:
+            prev_entry = self._entry_register[key]
+            prev_entry[2] = False
+        else:
+            if len(self._cache) == self._capacity:
+                while True:
+                    to_remove = heapq.heappop(self._heap)
+                    if to_remove[2]:
+                        self._cache.pop(to_remove[1])
+                        break
 
-        self._queue.append(key)
+        new_entry = [self._count, key, True]
+        heapq.heappush(self._heap, new_entry)
         self._cache[key] = value
+        self._entry_register[key] = new_entry
+        self._count += 1
 
 
 if __name__ == "__main__":
 
     lru_cache = LRUCache(2)
-    lru_cache.put(1, 1)
-    lru_cache.put(2, 2)
-    print(lru_cache.get(1))
-    lru_cache.put(3, 3)
     print(lru_cache.get(2))
-    lru_cache.put(4, 4)
+    lru_cache.put(2, 6)
     print(lru_cache.get(1))
-    print(lru_cache.get(3))
-    print(lru_cache.get(4))
+    lru_cache.put(1, 5)
+    lru_cache.put(1, 2)
+    print(lru_cache.get(1))
+    print(lru_cache.get(2))

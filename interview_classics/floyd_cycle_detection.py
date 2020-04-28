@@ -4,7 +4,7 @@ Given a linked list, determine if it has a cycle in it.
 To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in
 the linked list where tail connects to. If pos is -1, then there is no cycle in the linked list.
 """
-from typing import List
+from typing import List, Optional
 
 
 class ListNode:
@@ -13,30 +13,38 @@ class ListNode:
         self.next = None
 
 
-def is_cycle(node: ListNode) -> bool:
+def get_cycle_start(root: ListNode) -> Optional[ListNode]:
     """
     find if there is a cycle using
     Floyd's cycle detection algorithm
     """
 
-    if node is None:
-        return False
+    if root is None:
+        return None
 
-    slow = node
-    fast = node
+    slow = root
+    fast = root
 
     while fast.next and fast.next.next:
         slow = slow.next
         fast = fast.next.next
         if fast == slow:
-            return True
+            break
 
-    return False
+    if not fast.next or not fast.next.next:
+        return None
+    else:
+        slow = root
+        while slow != fast:
+            slow = slow.next
+            fast = fast.next
+
+        return slow
 
 
 class Solution:
-    def hasCycle(self, head: ListNode) -> bool:
-        return is_cycle(head)
+    def detectCycle(self, head: ListNode) -> ListNode:
+        return get_cycle_start(head)
 
 
 def list_to_linked_list(arr: List[int],
@@ -59,6 +67,7 @@ def list_to_linked_list(arr: List[int],
 
 if __name__ == "__main__":
 
-    l_1 = list_to_linked_list([1, 2, 3, 4, 5], 3)
-    print(is_cycle(l_1))
+    l_1 = list_to_linked_list([3, 2, 0, -4], 1)
+    n = get_cycle_start(l_1)
+    print(n)
 
