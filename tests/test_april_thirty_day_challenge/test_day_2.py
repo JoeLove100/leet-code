@@ -1,5 +1,5 @@
 import unittest
-from thirty_day_challenge.day_2 import is_happy
+from april_thirty_day_challenge.day_2 import is_happy
 
 
 class TestDay2(unittest.TestCase):

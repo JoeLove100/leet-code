@@ -1,5 +1,5 @@
 import unittest
-from thirty_day_challenge.day_4 import all_zeroes_at_end_v1, all_zeroes_at_end_v2
+from april_thirty_day_challenge.day_4 import all_zeroes_at_end_v1, all_zeroes_at_end_v2
 
 
 class TestDay4(unittest.TestCase):

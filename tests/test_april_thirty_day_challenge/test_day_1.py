@@ -1,5 +1,5 @@
 import unittest
-from thirty_day_challenge.day_1 import get_single_element
+from april_thirty_day_challenge.day_1 import get_single_element
 
 
 class TestDay1(unittest.TestCase):

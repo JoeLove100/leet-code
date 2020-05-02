@@ -1,5 +1,5 @@
 import unittest
-from thirty_day_challenge.day_12 import get_remaining_weight
+from april_thirty_day_challenge.day_12 import get_remaining_weight
 
 
 class TestDay12(unittest.TestCase):

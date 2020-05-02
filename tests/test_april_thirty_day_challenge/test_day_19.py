@@ -1,5 +1,5 @@
 import unittest
-from thirty_day_challenge.day_19 import shifted_binary_research
+from april_thirty_day_challenge.day_19 import shifted_binary_research
 
 
 class TestDay19(unittest.TestCase):

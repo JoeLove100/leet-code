@@ -1,5 +1,5 @@
 import unittest
-from thirty_day_challenge.day_18 import get_min_path
+from april_thirty_day_challenge.day_18 import get_min_path
 
 
 class TestDay18(unittest.TestCase):

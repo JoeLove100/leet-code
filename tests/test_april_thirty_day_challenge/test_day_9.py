@@ -1,5 +1,5 @@
 import unittest
-from thirty_day_challenge.day_9 import are_same, get_next_char_index
+from april_thirty_day_challenge.day_9 import are_same, get_next_char_index
 
 
 class TestDay9(unittest.TestCase):

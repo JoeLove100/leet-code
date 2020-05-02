@@ -1,5 +1,5 @@
 import unittest
-from thirty_day_challenge.day_22 import get_number_of_subarrays
+from april_thirty_day_challenge.day_22 import get_number_of_subarrays
 
 
 class TestDay22(unittest.TestCase):

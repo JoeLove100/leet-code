@@ -1,5 +1,5 @@
 import unittest
-from thirty_day_challenge.day_17 import get_number_of_islands, get_number_of_islands_bfs
+from april_thirty_day_challenge.day_17 import get_number_of_islands, get_number_of_islands_bfs
 
 
 class TestDay17(unittest.TestCase):

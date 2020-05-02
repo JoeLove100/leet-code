@@ -1,5 +1,5 @@
 import unittest
-from thirty_day_challenge.day_26 import get_max_substring_length
+from april_thirty_day_challenge.day_26 import get_max_substring_length
 
 
 class TestDay26(unittest.TestCase):

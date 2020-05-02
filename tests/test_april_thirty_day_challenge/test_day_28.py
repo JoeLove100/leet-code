@@ -1,5 +1,5 @@
 import unittest
-from thirty_day_challenge.day_28 import FirstUnique
+from april_thirty_day_challenge.day_28 import FirstUnique
 
 
 class TestDay28(unittest.TestCase):

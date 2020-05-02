@@ -1,5 +1,5 @@
 import unittest
-from thirty_day_challenge.day_8 import get_half_way_point, create_linked_list
+from april_thirty_day_challenge.day_8 import get_half_way_point, create_linked_list
 
 
 class TestDay8(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from thirty_day_challenge.day_5 import get_max_profit, get_max_linear_time
+from april_thirty_day_challenge.day_5 import get_max_profit, get_max_linear_time
 
 
 class TestDay5(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from thirty_day_challenge.day_6 import get_anagram_groups
+from april_thirty_day_challenge.day_6 import get_anagram_groups
 
 
 class TestDay6(unittest.TestCase):

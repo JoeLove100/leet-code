@@ -1,5 +1,5 @@
 import unittest
-from thirty_day_challenge.day_25 import is_possible, is_possible_linear
+from april_thirty_day_challenge.day_25 import is_possible, is_possible_linear
 
 
 class TestDay25(unittest.TestCase):
