@@ -1,5 +1,5 @@
 import unittest
-from may_thirty_day_challenge.day_9 import is_perfect_square
+from may_thirty_day_challenge.day_9 import is_perfect_square, is_perfect_square_binary_search
 
 
 class TestDay9(unittest.TestCase):
@@ -9,7 +9,7 @@ class TestDay9(unittest.TestCase):
         n = 1
 
         # act
-        result = is_perfect_square(n)
+        result = is_perfect_square_binary_search(n)
 
         # assert
         self.assertTrue(result)
@@ -19,7 +19,7 @@ class TestDay9(unittest.TestCase):
         n = 144
 
         # act
-        result = is_perfect_square(n)
+        result = is_perfect_square_binary_search(n)
 
         # assert
         self.assertTrue(result)
@@ -29,7 +29,7 @@ class TestDay9(unittest.TestCase):
         n = 95
 
         # act
-        result = is_perfect_square(n)
+        result = is_perfect_square_binary_search(n)
 
         # assert
         self.assertFalse(result)
@@ -39,7 +39,7 @@ class TestDay9(unittest.TestCase):
         n = 82
 
         # act
-        result = is_perfect_square(n)
+        result = is_perfect_square_binary_search(n)
 
         # assert
         self.assertFalse(result)
