@@ -12,6 +12,26 @@ class TreeNode:
         self.right = right
 
 
+def invert_binary_tree_2(root: TreeNode) -> TreeNode:
+
+    if not root:
+        root
+
+    q = deque([root])
+
+    while q:
+        current = q.popleft()
+
+        if current.left:
+            q.append(current.left)
+        if current.right:
+            q.append(current.right)
+
+        current.left, current.right = current.right, current.left
+
+    return root
+
+
 def invert_binary_tree(root: TreeNode) -> TreeNode:
 
     if not root:

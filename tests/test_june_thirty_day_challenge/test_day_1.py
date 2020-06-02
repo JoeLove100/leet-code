@@ -1,5 +1,5 @@
 import unittest
-from june_thirty_day_challenge.day_1 import create_tree_from_list, invert_binary_tree, dfs
+from june_thirty_day_challenge.day_1 import create_tree_from_list, invert_binary_tree_2, dfs
 
 
 class TestDay1(unittest.TestCase):
@@ -9,7 +9,7 @@ class TestDay1(unittest.TestCase):
         tree = create_tree_from_list([1])
 
         # act
-        result = invert_binary_tree(tree)
+        result = invert_binary_tree_2(tree)
         result = dfs(result)
 
         # assert
@@ -20,7 +20,7 @@ class TestDay1(unittest.TestCase):
         tree = create_tree_from_list([1, 2, 3])
 
         # act
-        result = invert_binary_tree(tree)
+        result = invert_binary_tree_2(tree)
         result = dfs(result)
 
         # assert
@@ -31,7 +31,7 @@ class TestDay1(unittest.TestCase):
         tree = create_tree_from_list([1, 2, 3, 4, 5, 6, 7])
 
         # act
-        result = invert_binary_tree(tree)
+        result = invert_binary_tree_2(tree)
         result = dfs(result)
 
         # assert
@@ -42,7 +42,7 @@ class TestDay1(unittest.TestCase):
         tree = create_tree_from_list([1, 2, 3, 4, None, None, 5])
 
         # act
-        result = invert_binary_tree(tree)
+        result = invert_binary_tree_2(tree)
         result = dfs(result)
 
         # assert
@@ -53,7 +53,7 @@ class TestDay1(unittest.TestCase):
         tree = create_tree_from_list([1, 2, None, 3, None, 4, None])
 
         # act
-        result = invert_binary_tree(tree)
+        result = invert_binary_tree_2(tree)
         result = dfs(result)
 
         # assert
@@ -64,7 +64,7 @@ class TestDay1(unittest.TestCase):
         tree = create_tree_from_list([1, 2, 3, None, 4, None, 5])
 
         # act
-        result = invert_binary_tree(tree)
+        result = invert_binary_tree_2(tree)
         result = dfs(result)
 
         # assert
